@@ -1,13 +1,214 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@400;500;600;700;800&display=swap");
+
+@layer components {
+  .btn {
+    @apply px-12 py-3 rounded-[40px] font-bold;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --white-accent: #ffffff;
+  --black-accent: #000000;
+  --yellow-accent: #ffeb92;
+  --light-grey-accent: #ababab;
+  --dark-grey-accent: #353535;
+  --light-purple-accent: #cfceff;
+  --dark-purple-accent: #5f31c1;
+  --light-blue-accent: #bfe8ff;
+  --dark-blue-accent: #004973;
+  --light-peach-accent: #ffd5c4;
+  --dark-peach-accent: #e18967;
+  --light-green-accent: #c9fff7;
+  --dark-green-accent: #1d6767;
+}
+
+body {
+  background-color: var(--black-accent);
+  color: white;
+  max-width: 1700px;
+  margin: auto;
+  transition: all 0.3s ease;
+  font-family: "Lato", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+}
+
+/* ----------------------------------------------------------------------------- */
+/* --------------------------------  TYPOGRAPHY -------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+.body-semibold {
+  font-family: "Raleway", sans-serif;
+}
+
+.text-lato {
+  font-family: "Lato", sans-serif;
+}
+
+li .body-semibold {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 88px;
+  line-height: 96px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 88px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+p,
+button,
+.body-semibold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+button,
+a {
+  font-weight: 500;
+}
+
+.body-semibold {
+  font-weight: 600;
+}
+
+.text-grey {
+  color: var(--light-grey-accent);
+}
+
+.text-yellow {
+  color: var(--yellow-accent);
+}
+
+.text-purple {
+  color: var(--dark-purple-accent);
+}
+
+.text-blue {
+  color: var(--dark-blue-accent);
+}
+
+.text-peach {
+  color: var(--dark-peach-accent);
+}
+
+.text-green {
+  color: var(--dark-green-accent);
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------  LAYOUT SETTINGS ----------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+.bg-grey {
+  background-color: var(--dark-grey-accent);
+}
+
+.bg-yellow {
+  background-color: var(--yellow-accent);
+}
+
+.bg-purple {
+  background-color: var(--light-purple-accent);
+}
+
+.bg-blue {
+  background-color: var(--dark-blue-accent);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue-accent);
+}
+
+.bg-peach {
+  background-color: var(--light-peach-accent);
+}
+
+.bg-green {
+  background-color: var(--light-green-accent);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green-accent);
+}
+
+main section {
+  margin: 40px 0 40px 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------ RESPONSIVE LAYOUTS --------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+/* Tablet Screens*/
+@media only screen and (max-width: 769px) {
+  h1 {
+    font-size: 72px;
+    line-height: 80px;
+  }
+
+  h2 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  h3 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 68px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
