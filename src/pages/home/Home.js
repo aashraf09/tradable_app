@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import landingPageHumanSVG from "../../assets/human-thinking.svg";
 import cryptoMiningBot from "../../assets/mining-bot-img.svg";
-import laptopWithCryptoMiningScreen from "../../assets/laptop-with-crypto-mining-screen.svg";
 
 import Creator from "./components/Creator";
 import Copier from "./components/Copier";
@@ -21,6 +20,7 @@ const Home = () => {
   window.addEventListener("load", () => {
     changeBackgroundColor();
     window.addEventListener("scroll", changeBackgroundColor);
+    window.addEventListener("touchmove", changeBackgroundColor);
   });
 
   window.addEventListener("beforeunload", () => {
@@ -28,7 +28,7 @@ const Home = () => {
   });
   return (
     <>
-      <main className="w-full relative">
+      <main className="w-full relative" onTouchMove={changeBackgroundColor}>
         <section
           data-color="black"
           className="colored-section relative w-[90%] lg:w-[70%] pt-10 md:pt-20 pb-10 m-auto text-center flex flex-col items-center justify-between gap-8 md:gap-14"
