@@ -26,17 +26,22 @@ const Home = () => {
   const [activeState, setActiveState] = useState("creators");
   const coloredSections = document.querySelectorAll(".colored-section");
 
-  window.addEventListener("scroll", () => {
-    coloredSections.forEach((section, index) => {
-      if (section.getBoundingClientRect().top <= window.innerHeight) {
+  const changeBackgroundColor = () => {
+    coloredSections.forEach((section) => {
+      if (
+        section.getBoundingClientRect().top <=
+        window.innerHeight - document.body.scrollTop
+      ) {
+        coloredSections.forEach((prevSection) => {
+          prevSection.style.backgroundColor = "";
+        });
         section.style.backgroundColor = section.dataset.color;
         document.body.style.backgroundColor = section.dataset.color;
-        if (section.getBoundingClientRect().top <= window.innerHeight) {
-          section.style.backgroundColor = "";
-        }
       }
     });
-  });
+  };
+
+  window.addEventListener("scroll", changeBackgroundColor);
 
   return (
     <>
