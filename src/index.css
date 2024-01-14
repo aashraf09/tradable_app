@@ -30,10 +30,45 @@ body {
   background-color: var(--black-accent);
   color: white;
   max-width: 1700px;
+  overflow-x: hidden;
   margin: auto;
   transition: all 0.3s ease;
   font-family: "Lato", sans-serif;
   /* font-family: "Raleway", sans-serif; */
+}
+
+.slide-right {
+  animation: slide-right 0.3s ease-in-out;
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clip-path {
+  clip-path: polygon(0 0, 60% 0, 60% 100%, 0% 100%);
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -151,6 +186,10 @@ a {
   background-color: var(--light-peach-accent);
 }
 
+.bg-dark-peach {
+  background-color: var(--dark-peach-accent);
+}
+
 .bg-green {
   background-color: var(--light-green-accent);
 }
@@ -168,7 +207,7 @@ main section {
 /* ----------------------------------------------------------------------------- */
 
 /* Tablet Screens*/
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   h1 {
     font-size: 72px;
     line-height: 80px;
@@ -186,7 +225,7 @@ main section {
 }
 
 /* Mobile Screens */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 50px;
     line-height: 56px;

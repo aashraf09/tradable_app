@@ -11,7 +11,7 @@ import logo from "../assets/logo.svg";
 const Footer = () => {
   return (
     <>
-      <footer className="w-[90%] m-auto flex flex-col md:flex-row items-center md:items-start justify-between py-10 md:py-20 gap-20 px-10 border-t border-t-slate-400">
+      <footer className="w-[90%] m-auto flex flex-col lg:flex-row items-center lg:items-start justify-between py-10 md:py-20 gap-20 px-10 border-t border-t-slate-400">
         {/* logo section */}
         <section className="flex flex-col items-center gap-5 justify-center">
           <img src={logo} alt="logo" />

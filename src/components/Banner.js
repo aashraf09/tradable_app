@@ -46,18 +46,18 @@ const Banner = (props) => {
     <section
       className={`w-[90%] m-auto ${
         bannerContentColor === "black" ? "text-black" : "text-white"
-      } ${bannerBackgroundColor} flex flex-col md:flex-row items-center md:items-start gap-10 justify-between rounded-[56px] px-10 pt-10 md:pt-20 pb-10`}
+      } ${bannerBackgroundColor} flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-between rounded-[56px] px-10 pt-10 md:pt-20 pb-10 md:pb-0`}
     >
       <img
         src={bannerMainImage}
         className={`basis-[40%] ${
           bannerMainImagePosition === "left"
-            ? "order-first hidden md:block"
+            ? "order-first hidden lg:block"
             : "order-last"
         } h-[500px]`}
         alt=""
       />
-      <div className="basis-[10%] hidden md:block"></div>
+      <div className="basis-[10%] hidden lg:block"></div>
       <div
         className={`md:basis-[55%] flex flex-col items-start justify-between gap-5 ${
           bannerMainImagePosition === "left" ? "order-last" : "order-first"
